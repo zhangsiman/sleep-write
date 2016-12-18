@@ -1,6 +1,16 @@
 const express= require ('express');
 const app= express();
+const mongoose =require('mongoose')
 
+
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/digicity')
+var db=mongoose.connection;
+db.on('error',console.log);
+db.once('open',function(){
+  console.log('success');
+})
 
 app.get('/',function(req,res){
   console.log('hello word');
@@ -9,5 +19,5 @@ app.get('/',function(req,res){
 
 
 app.listen(4000,function(){
-  console.log('success');
+  console.log('ccc');
 })
