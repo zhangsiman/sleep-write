@@ -127,3 +127,6 @@ module.exports = mongoose.model('Post',postSchema);
   3、在index.js中引用 const Routes=require('./routes.js')
   4.Routes(app);将这个语句替换掉之前写的所有的路由
   ```
+
+
+**client**
